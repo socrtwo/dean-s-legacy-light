@@ -84,13 +84,6 @@ const MemorialBio = () => {
       alternateUrl: "https://journals.sagepub.com/doi/abs/10.1177/0002764207302467"
     },
     {
-      title: "Social Identity and Intergroup Conflict",
-      authors: "Dean G. Pruitt, Sung Hee Kim",
-      year: "2004",
-      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Social+Identity+and+Intergroup+Conflict%22+Pruitt+Kim",
-      alternateUrl: "https://www.sciencedirect.com/search?qs=Social+Identity+Intergroup+Conflict+Pruitt+Kim"
-    },
-    {
       title: "The Spiral of Conflict: Escalation and De-escalation",
       authors: "Dean G. Pruitt",
       year: "1969",
