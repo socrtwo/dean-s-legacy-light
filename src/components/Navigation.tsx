@@ -26,6 +26,30 @@ const Navigation = () => {
               >
                 Memorial
               </Link>
+              <button
+                onClick={() => {
+                  if (location.pathname === '/') {
+                    document.getElementById('bio')?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/#bio';
+                  }
+                }}
+                className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+              >
+                Biography
+              </button>
+              <button
+                onClick={() => {
+                  if (location.pathname === '/') {
+                    document.getElementById('bibliography')?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/#bibliography';
+                  }
+                }}
+                className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+              >
+                Bibliography
+              </button>
               <Link
                 to="/gallery"
                 className={`text-sm font-medium transition-colors hover:text-primary ${
