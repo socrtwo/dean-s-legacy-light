@@ -30,17 +30,17 @@ const MemorialBio = () => {
       isbn: "978-1555421625",
       amazonUrl: "https://www.amazon.com/dp/1555421628",
       googleBooksUrl: "https://books.google.com/books?isbn=1555421625",
-      worldcatUrl: "https://www.worldcat.org/isbn/1555421625"
+      worldcatUrl: "https://search.worldcat.org/title/19672780?oclcNum=19672780"
     },
     {
       title: "Social Conflict: Escalation, Stalemate, and Settlement",
       year: "2004 (3rd ed.)",
       authors: "Dean G. Pruitt, Sung Hee Kim",
       publisher: "McGraw-Hill",
-      isbn: "978-0072855395",
-      amazonUrl: "https://www.amazon.com/dp/0072855398",
-      googleBooksUrl: "https://books.google.com/books?q=%22Social+Conflict+Escalation+Stalemate+Settlement%22+Pruitt+Kim",
-      worldcatUrl: "https://www.worldcat.org/search?q=ti%3ASocial+Conflict+Escalation+au%3APruitt+au%3AKim"
+      isbn: "978-0072855357",
+      amazonUrl: "https://www.amazon.com/dp/0072855357",
+      googleBooksUrl: "https://books.google.com/books?isbn=0072855357",
+      worldcatUrl: "https://www.worldcat.org/isbn/0072855357"
     },
     {
       title: "Searching for Better Agreements ... and Finding Them: Contributions of Dean G. Pruitt",
