@@ -11,14 +11,7 @@ const Index = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-muted to-background py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-foreground mb-6">
-            In Memory of Dr. Dean G. Pruitt
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Celebrating the life and legacy of a distinguished professor, pioneering researcher, 
-            and dedicated advocate for peace and understanding through the science of negotiation.
-          </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-4 justify-center mb-8">
             <Button asChild size="lg">
               <Link to="/gallery">View Memorial Gallery</Link>
             </Button>
@@ -32,6 +25,13 @@ const Index = () => {
               </Button>
             )}
           </div>
+          <h1 className="text-5xl font-bold text-foreground mb-6">
+            In Memory of Dr. Dean G. Pruitt
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            Celebrating the life and legacy of a distinguished professor, pioneering researcher, 
+            and dedicated advocate for peace and understanding through the science of negotiation.
+          </p>
         </div>
       </div>
 
