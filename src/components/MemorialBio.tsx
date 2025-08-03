@@ -77,13 +77,6 @@ const MemorialBio = () => {
       alternateUrl: "https://psycnet.apa.org/record/1982-32624-001"
     },
     {
-      title: "Strategy in Negotiation: Theory and Research",
-      authors: "Dean G. Pruitt",
-      year: "1981",
-      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Strategy+in+Negotiation+Theory+and+Research%22+Pruitt",
-      alternateUrl: "https://www.semanticscholar.org/search?q=Strategy+Negotiation+Theory+Research+Pruitt"
-    },
-    {
       title: "Problem Solving and Concession Making in Bilateral Negotiation",
       authors: "Dean G. Pruitt, Peter J. Carnevale",
       year: "1982",
