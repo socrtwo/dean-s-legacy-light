@@ -73,8 +73,8 @@ const MemorialBio = () => {
       title: "Matching and Mismatching: The Effect of Own Limit, Other's Toughness, and Time Pressure on Concession Rate in Negotiation",
       authors: "Dean G. Pruitt, Douglas F. Johnson",
       year: "1970",
-      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Matching+and+Mismatching+Effect+Own+Limit+Other+Toughness+Time+Pressure+Concession+Rate+Negotiation%22+Pruitt",
-      alternateUrl: "https://psycnet.apa.org/search/results?query=Matching+Mismatching+Effect+Limit+Toughness+Pruitt"
+      googleScholarUrl: "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C21&q=Matching+and+mismatching%3A+The+effect+of+own+limit%2C+other%27s+toughness%2C+and+time+pressure+on+concession+rate+in+negotiation.&btnG=",
+      alternateUrl: "https://psycnet.apa.org/record/1982-32624-001"
     },
     {
       title: "Strategy in Negotiation: Theory and Research",
