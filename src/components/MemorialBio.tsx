@@ -44,23 +44,13 @@ const MemorialBio = () => {
     },
     {
       title: "Searching for Better Agreements ... and Finding Them: Contributions of Dean G. Pruitt",
-      year: "2011",
+      year: "2015",
       authors: "William Donohue, Daniel Druckman (Editors)",
       publisher: "Boom Academic Publishers",
       isbn: "978-9089791344",
       amazonUrl: "https://www.amazon.com/dp/9089791345",
       googleBooksUrl: "https://books.google.com/books?isbn=9089791344",
-      worldcatUrl: "https://www.worldcat.org/isbn/9089791344"
-    },
-    {
-      title: "The Psychology of Social Conflict: Human Nature and the Quest for Peace",
-      year: "2019",
-      authors: "Dean G. Pruitt",
-      publisher: "Springer",
-      isbn: "978-3030207021",
-      amazonUrl: "https://www.amazon.com/dp/3030207021",
-      googleBooksUrl: "https://books.google.com/books?id=TZmhDwAAQBAJ",
-      worldcatUrl: "https://www.worldcat.org/search?q=ti%3APsychology+of+Social+Conflict+au%3APruitt"
+      worldcatUrl: "https://search.worldcat.org/search?q=+9789089791344&offset=1"
     }
   ];
 
