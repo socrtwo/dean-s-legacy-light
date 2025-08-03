@@ -3,6 +3,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const MemorialBio = () => {
   const books = [
     {
+      title: "Research and Theory into the Causes of War",
+      year: "1969",
+      authors: "Richard Snyder, Dean G. Pruitt (Editors)",
+      publisher: "Prentice-Hall",
+      isbn: "978-0139134180",
+      amazonUrl: "https://www.amazon.com/dp/0139134182",
+      googleBooksUrl: "https://books.google.com/books?isbn=0139134182",
+      worldcatUrl: "https://www.worldcat.org/isbn/0139134182"
+    },
+    {
       title: "Negotiation Behavior",
       year: "1981",
       authors: "Dean G. Pruitt",
@@ -33,14 +43,14 @@ const MemorialBio = () => {
       worldcatUrl: "https://www.worldcat.org/search?q=ti%3ASocial+Conflict+Escalation+au%3APruitt+au%3AKim"
     },
     {
-      title: "Whither Conflict Research?",
-      year: "2006",
-      authors: "Dean G. Pruitt",
-      publisher: "Conflict Resolution Education Connection", 
-      isbn: "N/A",
-      amazonUrl: "https://www.amazon.com/s?k=%22Whither+Conflict+Research%22+%22Dean+Pruitt%22",
-      googleBooksUrl: "https://books.google.com/books?q=%22Whither+Conflict+Research%22+%22Dean+G.+Pruitt%22",
-      worldcatUrl: "https://www.worldcat.org/search?q=ti%3AWhither+Conflict+Research+au%3APruitt"
+      title: "Searching for Better Agreements ... and Finding Them: Contributions of Dean G. Pruitt",
+      year: "2011",
+      authors: "William Donohue, Daniel Druckman (Editors)",
+      publisher: "Boom Academic Publishers",
+      isbn: "978-9089791344",
+      amazonUrl: "https://www.amazon.com/dp/9089791345",
+      googleBooksUrl: "https://books.google.com/books?isbn=9089791344",
+      worldcatUrl: "https://www.worldcat.org/isbn/9089791344"
     },
     {
       title: "The Psychology of Social Conflict: Human Nature and the Quest for Peace",
