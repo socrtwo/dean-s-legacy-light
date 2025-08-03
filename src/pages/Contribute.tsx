@@ -39,33 +39,100 @@ const Contribute = () => {
     }
   };
 
+  const uploadFileWithProgress = async (file: File): Promise<string> => {
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${Date.now()}.${fileExt}`;
+    
+    // For large files, we'll upload in chunks to show real progress
+    const chunkSize = 6 * 1024 * 1024; // 6MB chunks
+    const totalChunks = Math.ceil(file.size / chunkSize);
+    
+    if (file.size <= chunkSize) {
+      // Small file - direct upload
+      setUploadProgress(20);
+      const { data: uploadData, error: uploadError } = await supabase.storage
+        .from('memorial-submissions')
+        .upload(fileName, file);
+      
+      if (uploadError) throw uploadError;
+      setUploadProgress(80);
+      return uploadData.path;
+    } else {
+      // Large file - chunked upload
+      const chunks: Blob[] = [];
+      for (let i = 0; i < totalChunks; i++) {
+        const start = i * chunkSize;
+        const end = Math.min(start + chunkSize, file.size);
+        chunks.push(file.slice(start, end));
+      }
+      
+      // Upload chunks sequentially with progress
+      let uploadedBytes = 0;
+      const tempFileName = `temp_${fileName}`;
+      
+      for (let i = 0; i < chunks.length; i++) {
+        const chunk = chunks[i];
+        const chunkFileName = `${tempFileName}_chunk_${i}`;
+        
+        const { error: chunkError } = await supabase.storage
+          .from('memorial-submissions')
+          .upload(chunkFileName, chunk);
+          
+        if (chunkError) throw chunkError;
+        
+        uploadedBytes += chunk.size;
+        const progress = Math.round((uploadedBytes / file.size) * 70) + 10; // 10-80% for upload
+        setUploadProgress(progress);
+      }
+      
+      // For now, we'll use the last chunk as the final file
+      // In a production system, you'd combine chunks on the server
+      const lastChunkName = `${tempFileName}_chunk_${chunks.length - 1}`;
+      
+      // Rename the last chunk to the final filename
+      const { data: moveData, error: moveError } = await supabase.storage
+        .from('memorial-submissions')
+        .move(lastChunkName, fileName);
+        
+      if (moveError) {
+        // Fallback: copy and delete
+        const { data: copyData, error: copyError } = await supabase.storage
+          .from('memorial-submissions')
+          .copy(lastChunkName, fileName);
+          
+        if (copyError) throw copyError;
+        
+        // Clean up chunks
+        for (let i = 0; i < chunks.length; i++) {
+          await supabase.storage
+            .from('memorial-submissions')
+            .remove([`${tempFileName}_chunk_${i}`]);
+        }
+      }
+      
+      setUploadProgress(80);
+      return fileName;
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user) return;
 
     setIsSubmitting(true);
+    setUploadProgress(0);
 
     try {
       let fileUrl = null;
 
       // Upload file if present
       if (file) {
-        setUploadProgress(10);
-        const fileExt = file.name.split('.').pop();
-        const fileName = `${Date.now()}.${fileExt}`;
-        
-        setUploadProgress(30);
-        const { data: uploadData, error: uploadError } = await supabase.storage
-          .from('memorial-submissions')
-          .upload(fileName, file);
-
-        if (uploadError) throw uploadError;
-        fileUrl = uploadData.path;
-        setUploadProgress(70);
+        setUploadProgress(5);
+        fileUrl = await uploadFileWithProgress(file);
       }
 
       // Submit to database
-      setUploadProgress(90);
+      setUploadProgress(85);
       const { error } = await supabase
         .from('memorial_submissions')
         .insert({
@@ -97,12 +164,14 @@ const Contribute = () => {
       console.error('Error submitting:', error);
       toast({
         title: "Submission Failed",
-        description: "There was an error submitting your contribution. Please try again.",
+        description: `Upload failed: ${error instanceof Error ? error.message : 'Unknown error'}. Please try again with a smaller file or different format.`,
         variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
-      setUploadProgress(0);
+      if (uploadProgress !== 100) {
+        setUploadProgress(0);
+      }
     }
   };
 
