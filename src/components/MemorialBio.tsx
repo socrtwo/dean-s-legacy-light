@@ -77,13 +77,6 @@ const MemorialBio = () => {
       alternateUrl: "https://psycnet.apa.org/record/1982-32624-001"
     },
     {
-      title: "Strategic Choice in Conflicts: The Importance of Relationships",
-      authors: "Dean G. Pruitt, Peter J. Carnevale",
-      year: "1993",
-      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Strategic+Choice+in+Conflicts+Importance+of+Relationships%22+Pruitt+Carnevale",
-      alternateUrl: "https://www.tandfonline.com/action/doSearch?AllField=Strategic+Choice+Conflicts+Importance+Relationships+Pruitt"
-    },
-    {
       title: "Readiness Theory and the Northern Ireland Conflict",
       authors: "Dean G. Pruitt",
       year: "2007",
