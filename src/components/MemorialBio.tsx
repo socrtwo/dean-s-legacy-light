@@ -67,7 +67,7 @@ const MemorialBio = () => {
       authors: "Dean G. Pruitt, Steven A. Lewis",
       year: "1975",
       googleScholarUrl: "https://scholar.google.com/scholar?q=%22The+Development+of+Integrative+Solutions+in+Bilateral+Negotiation%22+Pruitt+Lewis",
-      alternateUrl: "https://www.jstor.org/action/doBasicSearch?Query=Development+Integrative+Solutions+Bilateral+Negotiation+Pruitt"
+      alternateUrl: "https://sci-hub.vg/10.1037/0022-3514.31.4.621"
     },
     {
       title: "Matching and Mismatching: The Effect of Own Limit, Other's Toughness, and Time Pressure on Concession Rate in Negotiation",
