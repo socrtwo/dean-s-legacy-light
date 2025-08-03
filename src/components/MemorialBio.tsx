@@ -83,13 +83,6 @@ const MemorialBio = () => {
       googleScholarUrl: "https://scholar.google.com/scholar?q=%22Readiness+Theory+and+the+Northern+Ireland+Conflict%22+Pruitt",
       alternateUrl: "https://journals.sagepub.com/doi/abs/10.1177/0002764207302467"
     },
-    {
-      title: "The Spiral of Conflict: Escalation and De-escalation",
-      authors: "Dean G. Pruitt",
-      year: "1969",
-      googleScholarUrl: "https://scholar.google.com/scholar?q=%22The+Spiral+of+Conflict+Escalation+and+De-escalation%22+Pruitt",
-      alternateUrl: "https://psycnet.apa.org/search/results?query=Spiral+Conflict+Escalation+De-escalation+Pruitt"
-    }
   ];
 
   return (
