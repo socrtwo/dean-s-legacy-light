@@ -11,19 +11,35 @@ const Index = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-muted to-background pt-8 pb-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="flex gap-4 justify-center mb-5">
-            <Button asChild size="lg">
-              <Link to="/gallery">View Memorial Gallery</Link>
-            </Button>
-            {user ? (
-              <Button asChild variant="outline" size="lg">
-                <Link to="/contribute">Share a Memory</Link>
-              </Button>
-            ) : (
-              <Button asChild variant="outline" size="lg">
-                <Link to="/auth">Sign In to Contribute</Link>
-              </Button>
-            )}
+          <div className="bg-card/90 backdrop-blur-sm border border-border rounded-2xl p-6 mb-8 max-w-md mx-auto shadow-lg">
+            <div className="space-y-3 text-center">
+              <Link 
+                to="#bio" 
+                className="block text-primary hover:text-primary/80 transition-colors font-medium"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('bio')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Biography
+              </Link>
+              <Link 
+                to="#bibliography" 
+                className="block text-primary hover:text-primary/80 transition-colors font-medium"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('bibliography')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Bibliography
+              </Link>
+              <Link 
+                to="/gallery" 
+                className="block text-primary hover:text-primary/80 transition-colors font-medium"
+              >
+                Memorial Gallery
+              </Link>
+            </div>
           </div>
           <h1 className="text-5xl font-bold text-foreground mb-6">
             In Memory of Dr. Dean G. Pruitt

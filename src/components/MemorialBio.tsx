@@ -84,7 +84,7 @@ const MemorialBio = () => {
 
   return (
     <div className="space-y-8">
-      <Card>
+      <Card id="bio">
         <CardHeader>
           <CardTitle className="text-2xl text-center">
             Dr. Dean G. Pruitt (1930-2024)
@@ -126,7 +126,7 @@ const MemorialBio = () => {
         </CardContent>
       </Card>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8" id="bibliography">
         <Card>
           <CardHeader>
             <CardTitle>Notable Books</CardTitle>
