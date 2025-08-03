@@ -9,9 +9,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="bg-gradient-to-b from-muted to-background py-24">
+      <div className="bg-gradient-to-b from-muted to-background pt-24 pb-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="flex gap-4 justify-center mb-8">
+          <div className="flex gap-4 justify-center mb-4">
             <Button asChild size="lg">
               <Link to="/gallery">View Memorial Gallery</Link>
             </Button>
@@ -36,7 +36,7 @@ const Index = () => {
       </div>
 
       {/* Bio Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 py-8">
         <MemorialBio />
       </div>
 
