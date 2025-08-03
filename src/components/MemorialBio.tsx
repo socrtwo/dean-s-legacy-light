@@ -77,13 +77,6 @@ const MemorialBio = () => {
       alternateUrl: "https://psycnet.apa.org/record/1982-32624-001"
     },
     {
-      title: "Problem Solving and Concession Making in Bilateral Negotiation",
-      authors: "Dean G. Pruitt, Peter J. Carnevale",
-      year: "1982",
-      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Problem+Solving+and+Concession+Making+in+Bilateral+Negotiation%22+Pruitt+Carnevale",
-      alternateUrl: "https://www.researchgate.net/search.Search.html?query=Problem+Solving+Concession+Making+Bilateral+Negotiation+Pruitt"
-    },
-    {
       title: "Strategic Choice in Conflicts: The Importance of Relationships",
       authors: "Dean G. Pruitt, Peter J. Carnevale",
       year: "1993",
