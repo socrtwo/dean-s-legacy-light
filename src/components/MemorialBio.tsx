@@ -59,15 +59,8 @@ const MemorialBio = () => {
       title: "Strategic Choice in Negotiation",
       authors: "Dean G. Pruitt",
       year: "1983",
-      googleScholarUrl: "https://journals.sagepub.com/doi/10.1177/000276483027002005",
-      alternateUrl: "https://journals.sagepub.com/doi/10.1177/000276483027002005"
-    },
-    {
-      title: "Achievement of Integrative Agreements in Negotiation",
-      authors: "Dean G. Pruitt",
-      year: "1983",
-      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Achievement+of+Integrative+Agreements+in+Negotiation%22+Pruitt",
-      alternateUrl: "https://psycnet.apa.org/search/results?query=Achievement+Integrative+Agreements+Negotiation+Pruitt"
+      googleScholarUrl: "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C21&q=Strategic+Choice+in+Negotiation&btnG=",
+      alternateUrl: "https://www.ojp.gov/ncjrs/virtual-library/abstracts/strategic-choice-negotiation"
     },
     {
       title: "The Development of Integrative Solutions in Bilateral Negotiation",
