@@ -11,8 +11,8 @@ const Index = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-muted to-background pt-8 pb-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-card/90 backdrop-blur-sm border border-border rounded-2xl p-6 mb-8 max-w-md mx-auto shadow-lg">
-            <div className="space-y-3 text-center">
+          <div className="fixed top-20 right-4 z-50 bg-card/95 backdrop-blur-sm border border-border rounded-xl p-4 shadow-lg max-w-[180px]">
+            <div className="space-y-2 text-sm">
               <Link 
                 to="#bio" 
                 className="block text-primary hover:text-primary/80 transition-colors font-medium"
