@@ -81,7 +81,7 @@ const MemorialBio = () => {
       authors: "Dean G. Pruitt",
       year: "2007",
       googleScholarUrl: "https://scholar.google.com/scholar?q=%22Readiness+Theory+and+the+Northern+Ireland+Conflict%22+Pruitt",
-      alternateUrl: "https://www.cambridge.org/core/search?filters%5BauthorTerms%5D=Dean%20Pruitt&eventCode=SE-AU"
+      alternateUrl: "https://journals.sagepub.com/doi/abs/10.1177/0002764207302467"
     },
     {
       title: "Social Identity and Intergroup Conflict",
