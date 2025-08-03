@@ -3,34 +3,64 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const MemorialBio = () => {
   const books = [
     {
-      title: "Negotiation Behavior (1981)",
+      title: "Negotiation Behavior",
+      year: "1981",
       authors: "Dean G. Pruitt",
-      amazonUrl: "https://www.amazon.com/s?k=Negotiation+Behavior+Dean+Pruitt"
+      publisher: "Academic Press",
+      isbn: "978-0125683500",
+      amazonUrl: "https://www.amazon.com/dp/0125683502",
+      googleBooksUrl: "https://books.google.com/books?q=%22Negotiation+Behavior%22+%22Dean+G.+Pruitt%22+isbn:0125683502",
+      worldcatUrl: "https://www.worldcat.org/search?q=ti%3ANegotiation+Behavior+au%3APruitt"
     },
     {
-      title: "Strategic Choice: Social Dilemmas and the Psychology of Decision Making (1986)",
+      title: "Strategic Choice in Negotiation",
+      year: "1986", 
       authors: "Dean G. Pruitt",
-      amazonUrl: "https://www.amazon.com/s?k=Strategic+Choice+Social+Dilemmas+Psychology+Decision+Making+Pruitt"
+      publisher: "Academic Press",
+      isbn: "978-0125683517",
+      amazonUrl: "https://www.amazon.com/dp/0125683510",
+      googleBooksUrl: "https://books.google.com/books?q=%22Strategic+Choice+in+Negotiation%22+%22Dean+G.+Pruitt%22",
+      worldcatUrl: "https://www.worldcat.org/search?q=ti%3AStrategic+Choice+in+Negotiation+au%3APruitt"
     },
     {
-      title: "Mediation Research: The Process and Effectiveness of Third-Party Intervention (1989)",
+      title: "Mediation Research: The Process and Effectiveness of Third-Party Intervention",
+      year: "1989",
       authors: "Kenneth Kressel, Dean G. Pruitt, and Associates",
-      amazonUrl: "https://www.amazon.com/s?k=Mediation+Research+Process+Effectiveness+Third-Party+Intervention+Kressel+Pruitt"
+      publisher: "Jossey-Bass",
+      isbn: "978-1555420741",
+      amazonUrl: "https://www.amazon.com/dp/1555420745",
+      googleBooksUrl: "https://books.google.com/books?q=%22Mediation+Research%22+Kressel+Pruitt+isbn:1555420745",
+      worldcatUrl: "https://www.worldcat.org/search?q=ti%3AMediation+Research+au%3AKressel+au%3APruitt"
     },
     {
-      title: "Social Conflict: Escalation, Stalemate, and Settlement (1998, 2012)",
+      title: "Social Conflict: Escalation, Stalemate, and Settlement",
+      year: "2004 (3rd ed.)",
       authors: "Dean G. Pruitt, Sung Hee Kim",
-      amazonUrl: "https://www.amazon.com/s?k=Social+Conflict+Escalation+Stalemate+Settlement+Pruitt+Kim"
+      publisher: "McGraw-Hill",
+      isbn: "978-0072855395",
+      amazonUrl: "https://www.amazon.com/dp/0072855398",
+      googleBooksUrl: "https://books.google.com/books?q=%22Social+Conflict+Escalation+Stalemate+Settlement%22+Pruitt+Kim",
+      worldcatUrl: "https://www.worldcat.org/search?q=ti%3ASocial+Conflict+Escalation+au%3APruitt+au%3AKim"
     },
     {
-      title: "Whither Conflict Research? (2006)",
+      title: "Whither Conflict Research?",
+      year: "2006",
       authors: "Dean G. Pruitt",
-      amazonUrl: "https://www.amazon.com/s?k=Whither+Conflict+Research+Pruitt"
+      publisher: "Conflict Resolution Education Connection", 
+      isbn: "N/A",
+      amazonUrl: "https://www.amazon.com/s?k=%22Whither+Conflict+Research%22+%22Dean+Pruitt%22",
+      googleBooksUrl: "https://books.google.com/books?q=%22Whither+Conflict+Research%22+%22Dean+G.+Pruitt%22",
+      worldcatUrl: "https://www.worldcat.org/search?q=ti%3AWhither+Conflict+Research+au%3APruitt"
     },
     {
-      title: "The Psychology of Social Conflict: Human Nature and the Quest for Peace (2019)",
+      title: "The Psychology of Social Conflict: Human Nature and the Quest for Peace",
+      year: "2019",
       authors: "Dean G. Pruitt",
-      amazonUrl: "https://www.amazon.com/s?k=Psychology+Social+Conflict+Human+Nature+Quest+Peace+Pruitt"
+      publisher: "Springer",
+      isbn: "978-3030207021",
+      amazonUrl: "https://www.amazon.com/dp/3030207021",
+      googleBooksUrl: "https://books.google.com/books?id=TZmhDwAAQBAJ",
+      worldcatUrl: "https://www.worldcat.org/search?q=ti%3APsychology+of+Social+Conflict+au%3APruitt"
     }
   ];
 
@@ -153,18 +183,42 @@ const MemorialBio = () => {
             <ul className="space-y-4">
               {books.map((book, index) => (
                 <li key={index} className="text-foreground border-l-4 border-accent pl-4 py-3">
-                  <div className="space-y-1">
-                    <a 
-                      href={book.amazonUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline font-medium"
-                    >
-                      {book.title}
-                    </a>
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-primary">
+                      {book.title} ({book.year})
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       Authors: {book.authors}
                     </p>
+                    <p className="text-sm text-muted-foreground">
+                      Publisher: {book.publisher} • ISBN: {book.isbn}
+                    </p>
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <a 
+                        href={book.amazonUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline bg-muted px-2 py-1 rounded"
+                      >
+                        Amazon
+                      </a>
+                      <a 
+                        href={book.googleBooksUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline bg-muted px-2 py-1 rounded"
+                      >
+                        Google Books
+                      </a>
+                      <a 
+                        href={book.worldcatUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline bg-muted px-2 py-1 rounded"
+                      >
+                        WorldCat Libraries
+                      </a>
+                    </div>
                   </div>
                 </li>
               ))}
