@@ -1,12 +1,34 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
+import { useState, useEffect } from 'react';
 
 const Navigation = () => {
   const { user, signOut } = useAuth();
   const location = useLocation();
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const isActive = (path: string) => location.pathname === path;
+
+  useEffect(() => {
+    const checkAdminRole = async () => {
+      if (!user) {
+        setIsAdmin(false);
+        return;
+      }
+
+      try {
+        const { data } = await import('@/integrations/supabase/client').then(module => 
+          module.supabase.from('user_roles').select('role').eq('user_id', user.id).single()
+        );
+        setIsAdmin(data?.role === 'admin');
+      } catch (error) {
+        setIsAdmin(false);
+      }
+    };
+
+    checkAdminRole();
+  }, [user]);
 
   return (
     <nav className="bg-card border-b border-border">
@@ -66,6 +88,16 @@ const Navigation = () => {
                   }`}
                 >
                   Contribute
+                </Link>
+              )}
+              {isAdmin && (
+                <Link
+                  to="/admin"
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    isActive('/admin') ? 'text-primary' : 'text-muted-foreground'
+                  }`}
+                >
+                  Admin
                 </Link>
               )}
             </div>

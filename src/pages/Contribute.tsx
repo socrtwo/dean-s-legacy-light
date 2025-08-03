@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Progress } from '@/components/ui/progress';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -18,10 +19,23 @@ const Contribute = () => {
   const [file, setFile] = useState<File | null>(null);
   const [linkUrl, setLinkUrl] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setFile(e.target.files[0]);
+      const selectedFile = e.target.files[0];
+      const maxSize = 100 * 1024 * 1024; // 100MB
+      
+      if (selectedFile.size > maxSize) {
+        toast({
+          title: "File too large",
+          description: "Please select a file smaller than 100MB.",
+          variant: "destructive",
+        });
+        return;
+      }
+      
+      setFile(selectedFile);
     }
   };
 
@@ -36,17 +50,22 @@ const Contribute = () => {
 
       // Upload file if present
       if (file) {
+        setUploadProgress(10);
         const fileExt = file.name.split('.').pop();
         const fileName = `${Date.now()}.${fileExt}`;
+        
+        setUploadProgress(30);
         const { data: uploadData, error: uploadError } = await supabase.storage
           .from('memorial-submissions')
           .upload(fileName, file);
 
         if (uploadError) throw uploadError;
         fileUrl = uploadData.path;
+        setUploadProgress(70);
       }
 
       // Submit to database
+      setUploadProgress(90);
       const { error } = await supabase
         .from('memorial_submissions')
         .insert({
@@ -60,6 +79,7 @@ const Contribute = () => {
         });
 
       if (error) throw error;
+      setUploadProgress(100);
 
       toast({
         title: "Submission Successful",
@@ -72,6 +92,7 @@ const Contribute = () => {
       setSubmissionType('');
       setFile(null);
       setLinkUrl('');
+      setUploadProgress(0);
     } catch (error) {
       console.error('Error submitting:', error);
       toast({
@@ -81,6 +102,7 @@ const Contribute = () => {
       });
     } finally {
       setIsSubmitting(false);
+      setUploadProgress(0);
     }
   };
 
@@ -113,6 +135,9 @@ const Contribute = () => {
           </h1>
           <p className="text-muted-foreground">
             Share your memories, photos, or other content to honor Dr. Dean G. Pruitt
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            <strong>File size limit:</strong> 100MB maximum per file
           </p>
         </div>
 
@@ -192,9 +217,20 @@ const Contribute = () => {
                     }
                   />
                   {file && (
-                    <p className="text-sm text-muted-foreground">
-                      Selected: {file.name}
-                    </p>
+                    <div className="space-y-2">
+                      <p className="text-sm text-muted-foreground">
+                        Selected: {file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)
+                      </p>
+                      {isSubmitting && uploadProgress > 0 && (
+                        <div className="space-y-1">
+                          <div className="flex justify-between text-sm">
+                            <span>Uploading...</span>
+                            <span>{uploadProgress}%</span>
+                          </div>
+                          <Progress value={uploadProgress} className="w-full" />
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
               )}
