@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import drPruittPortrait from '@/assets/dr-pruitt-portrait.jpg';
 
 const MemorialBio = () => {
   const books = [
@@ -93,25 +92,20 @@ const MemorialBio = () => {
         </CardHeader>
         <CardContent className="prose prose-lg max-w-none">
           <div className="space-y-6 text-foreground">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
-              <div className="flex-shrink-0">
-                <img 
-                  src={drPruittPortrait} 
-                  alt="Dr. Dean G. Pruitt"
-                  className="w-64 h-80 object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="flex-1">
-                <p className="lead text-xl text-muted-foreground text-center md:text-left mb-6">
-                  Distinguished Professor Emeritus of Social Psychology and Expert in Peace and Negotiation
-                </p>
-                <p>
-                  Dr. Dean G. Pruitt was a towering figure in the field of social psychology, renowned worldwide for his groundbreaking research in conflict resolution, negotiation, and peace studies. Throughout his distinguished career, he dedicated his life to understanding the psychological mechanisms that drive both conflict and cooperation among individuals and groups.
-                </p>
-              </div>
-            </div>
+            <p className="lead text-xl text-muted-foreground text-center mb-8">
+              Distinguished Professor Emeritus of Social Psychology and Expert in Peace and Negotiation
+            </p>
             
-            <div className="space-y-4">
+            <div className="space-y-4 clear-left">
+              <img 
+                src="/lovable-uploads/92d6a831-3cce-41af-897b-456590a9cf13.png" 
+                alt="Dr. Dean G. Pruitt"
+                className="float-left w-64 h-80 object-cover object-top rounded-lg shadow-lg mr-6 mb-4"
+              />
+              <p>
+                Dr. Dean G. Pruitt was a towering figure in the field of social psychology, renowned worldwide for his groundbreaking research in conflict resolution, negotiation, and peace studies. Throughout his distinguished career, he dedicated his life to understanding the psychological mechanisms that drive both conflict and cooperation among individuals and groups.
+              </p>
+              
               <p>
                 Born in 1930, Dr. Pruitt's academic journey led him to become one of the most influential scholars in social psychology. His work bridged the gap between theoretical research and practical application, making significant contributions to our understanding of how conflicts escalate and how they can be resolved through negotiation and mediation.
               </p>
@@ -120,7 +114,7 @@ const MemorialBio = () => {
                 As a professor, Dr. Pruitt mentored countless students who went on to become leaders in psychology, conflict resolution, and peace studies. His teaching philosophy emphasized the importance of rigorous research combined with a deep commitment to applying psychological insights to real-world problems.
               </p>
               
-              <p>
+              <p className="clear-left">
                 Dr. Pruitt's research examined the complex dynamics of interpersonal and intergroup conflict, with particular attention to the psychological factors that influence negotiation outcomes. His work on integrative bargaining, strategic choice in conflicts, and the role of third-party intervention has shaped how we understand and approach conflict resolution today.
               </p>
               
