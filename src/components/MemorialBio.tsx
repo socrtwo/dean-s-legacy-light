@@ -38,47 +38,65 @@ const MemorialBio = () => {
     {
       title: "Achievement of Integrative Agreements in Negotiation",
       authors: "Dean G. Pruitt",
-      url: "https://scholar.google.com/scholar?q=%22Achievement+of+Integrative+Agreements+in+Negotiation%22+Pruitt"
+      year: "1983",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Achievement+of+Integrative+Agreements+in+Negotiation%22+Pruitt",
+      alternateUrl: "https://psycnet.apa.org/search/results?query=Achievement+Integrative+Agreements+Negotiation+Pruitt"
     },
     {
       title: "The Development of Integrative Solutions in Bilateral Negotiation",
       authors: "Dean G. Pruitt, Steven A. Lewis",
-      url: "https://scholar.google.com/scholar?q=%22The+Development+of+Integrative+Solutions+in+Bilateral+Negotiation%22+Pruitt+Lewis"
+      year: "1975",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22The+Development+of+Integrative+Solutions+in+Bilateral+Negotiation%22+Pruitt+Lewis",
+      alternateUrl: "https://www.jstor.org/action/doBasicSearch?Query=Development+Integrative+Solutions+Bilateral+Negotiation+Pruitt"
     },
     {
       title: "Matching and Mismatching: The Effect of Own Limit, Other's Toughness, and Time Pressure on Concession Rate in Negotiation",
       authors: "Dean G. Pruitt, Douglas F. Johnson",
-      url: "https://scholar.google.com/scholar?q=%22Matching+and+Mismatching+Effect+Own+Limit+Other+Toughness+Time+Pressure+Concession+Rate+Negotiation%22+Pruitt"
+      year: "1970",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Matching+and+Mismatching+Effect+Own+Limit+Other+Toughness+Time+Pressure+Concession+Rate+Negotiation%22+Pruitt",
+      alternateUrl: "https://psycnet.apa.org/search/results?query=Matching+Mismatching+Effect+Limit+Toughness+Pruitt"
     },
     {
       title: "Strategy in Negotiation: Theory and Research",
       authors: "Dean G. Pruitt",
-      url: "https://scholar.google.com/scholar?q=%22Strategy+in+Negotiation+Theory+and+Research%22+Pruitt"
+      year: "1981",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Strategy+in+Negotiation+Theory+and+Research%22+Pruitt",
+      alternateUrl: "https://www.semanticscholar.org/search?q=Strategy+Negotiation+Theory+Research+Pruitt"
     },
     {
       title: "Problem Solving and Concession Making in Bilateral Negotiation",
       authors: "Dean G. Pruitt, Peter J. Carnevale",
-      url: "https://scholar.google.com/scholar?q=%22Problem+Solving+and+Concession+Making+in+Bilateral+Negotiation%22+Pruitt+Carnevale"
+      year: "1982",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Problem+Solving+and+Concession+Making+in+Bilateral+Negotiation%22+Pruitt+Carnevale",
+      alternateUrl: "https://www.researchgate.net/search.Search.html?query=Problem+Solving+Concession+Making+Bilateral+Negotiation+Pruitt"
     },
     {
       title: "Strategic Choice in Conflicts: The Importance of Relationships",
       authors: "Dean G. Pruitt, Peter J. Carnevale",
-      url: "https://scholar.google.com/scholar?q=%22Strategic+Choice+in+Conflicts+Importance+of+Relationships%22+Pruitt+Carnevale"
+      year: "1993",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Strategic+Choice+in+Conflicts+Importance+of+Relationships%22+Pruitt+Carnevale",
+      alternateUrl: "https://www.tandfonline.com/action/doSearch?AllField=Strategic+Choice+Conflicts+Importance+Relationships+Pruitt"
     },
     {
       title: "Readiness Theory and the Northern Ireland Conflict",
       authors: "Dean G. Pruitt",
-      url: "https://scholar.google.com/scholar?q=%22Readiness+Theory+and+the+Northern+Ireland+Conflict%22+Pruitt"
+      year: "2007",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Readiness+Theory+and+the+Northern+Ireland+Conflict%22+Pruitt",
+      alternateUrl: "https://www.cambridge.org/core/search?filters%5BauthorTerms%5D=Dean%20Pruitt&eventCode=SE-AU"
     },
     {
       title: "Social Identity and Intergroup Conflict",
       authors: "Dean G. Pruitt, Sung Hee Kim",
-      url: "https://scholar.google.com/scholar?q=%22Social+Identity+and+Intergroup+Conflict%22+Pruitt+Kim"
+      year: "2004",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22Social+Identity+and+Intergroup+Conflict%22+Pruitt+Kim",
+      alternateUrl: "https://www.sciencedirect.com/search?qs=Social+Identity+Intergroup+Conflict+Pruitt+Kim"
     },
     {
       title: "The Spiral of Conflict: Escalation and De-escalation",
       authors: "Dean G. Pruitt",
-      url: "https://scholar.google.com/scholar?q=%22The+Spiral+of+Conflict+Escalation+and+De-escalation%22+Pruitt"
+      year: "1969",
+      googleScholarUrl: "https://scholar.google.com/scholar?q=%22The+Spiral+of+Conflict+Escalation+and+De-escalation%22+Pruitt",
+      alternateUrl: "https://psycnet.apa.org/search/results?query=Spiral+Conflict+Escalation+De-escalation+Pruitt"
     }
   ];
 
@@ -162,18 +180,31 @@ const MemorialBio = () => {
             <ul className="space-y-4">
               {majorArticles.map((article, index) => (
                 <li key={index} className="text-foreground border-l-4 border-accent pl-4 py-3">
-                  <div className="space-y-1">
-                    <a 
-                      href={article.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline font-medium"
-                    >
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-primary">
                       {article.title}
-                    </a>
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      Authors: {article.authors}
+                      Authors: {article.authors} • Year: {article.year}
                     </p>
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <a 
+                        href={article.googleScholarUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline bg-muted px-2 py-1 rounded"
+                      >
+                        Google Scholar
+                      </a>
+                      <a 
+                        href={article.alternateUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline bg-muted px-2 py-1 rounded"
+                      >
+                        Alternative Search
+                      </a>
+                    </div>
                   </div>
                 </li>
               ))}
