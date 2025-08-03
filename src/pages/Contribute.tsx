@@ -24,12 +24,12 @@ const Contribute = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const selectedFile = e.target.files[0];
-      const maxSize = 100 * 1024 * 1024; // 100MB
+      const maxSize = 2 * 1024 * 1024 * 1024; // 2GB
       
       if (selectedFile.size > maxSize) {
         toast({
           title: "File too large",
-          description: "Please select a file smaller than 100MB.",
+          description: "Please select a file smaller than 2GB.",
           variant: "destructive",
         });
         return;
@@ -137,7 +137,7 @@ const Contribute = () => {
             Share your memories, photos, or other content to honor Dr. Dean G. Pruitt
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            <strong>File size limit:</strong> 100MB maximum per file
+            <strong>File size limit:</strong> 2GB maximum per file
           </p>
         </div>
 
