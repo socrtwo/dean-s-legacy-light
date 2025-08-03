@@ -11,7 +11,7 @@ const Index = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-muted to-background pt-8 pb-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="flex gap-4 justify-center mb-32">
+          <div className="flex gap-4 justify-center mb-2">
             <Button asChild size="lg">
               <Link to="/gallery">View Memorial Gallery</Link>
             </Button>
