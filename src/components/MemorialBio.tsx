@@ -7,30 +7,20 @@ const MemorialBio = () => {
       year: "1981",
       authors: "Dean G. Pruitt",
       publisher: "Academic Press",
-      isbn: "978-0125683500",
-      amazonUrl: "https://www.amazon.com/dp/0125683502",
-      googleBooksUrl: "https://books.google.com/books?q=%22Negotiation+Behavior%22+%22Dean+G.+Pruitt%22+isbn:0125683502",
-      worldcatUrl: "https://www.worldcat.org/search?q=ti%3ANegotiation+Behavior+au%3APruitt"
-    },
-    {
-      title: "Strategic Choice in Negotiation",
-      year: "1986", 
-      authors: "Dean G. Pruitt",
-      publisher: "Academic Press",
-      isbn: "978-0125683517",
-      amazonUrl: "https://www.amazon.com/dp/0125683510",
-      googleBooksUrl: "https://books.google.com/books?q=%22Strategic+Choice+in+Negotiation%22+%22Dean+G.+Pruitt%22",
-      worldcatUrl: "https://www.worldcat.org/search?q=ti%3AStrategic+Choice+in+Negotiation+au%3APruitt"
+      isbn: "978-0125662505",
+      amazonUrl: "https://www.amazon.com/dp/0125662505",
+      googleBooksUrl: "https://books.google.com/books?isbn=0125662505",
+      worldcatUrl: "https://www.worldcat.org/isbn/0125662505"
     },
     {
       title: "Mediation Research: The Process and Effectiveness of Third-Party Intervention",
       year: "1989",
       authors: "Kenneth Kressel, Dean G. Pruitt, and Associates",
       publisher: "Jossey-Bass",
-      isbn: "978-1555420741",
-      amazonUrl: "https://www.amazon.com/dp/1555420745",
-      googleBooksUrl: "https://books.google.com/books?q=%22Mediation+Research%22+Kressel+Pruitt+isbn:1555420745",
-      worldcatUrl: "https://www.worldcat.org/search?q=ti%3AMediation+Research+au%3AKressel+au%3APruitt"
+      isbn: "978-1555421625",
+      amazonUrl: "https://www.amazon.com/dp/1555421628",
+      googleBooksUrl: "https://books.google.com/books?isbn=1555421625",
+      worldcatUrl: "https://www.worldcat.org/isbn/1555421625"
     },
     {
       title: "Social Conflict: Escalation, Stalemate, and Settlement",
@@ -65,6 +55,13 @@ const MemorialBio = () => {
   ];
 
   const majorArticles = [
+    {
+      title: "Strategic Choice in Negotiation",
+      authors: "Dean G. Pruitt",
+      year: "1983",
+      googleScholarUrl: "https://journals.sagepub.com/doi/10.1177/000276483027002005",
+      alternateUrl: "https://journals.sagepub.com/doi/10.1177/000276483027002005"
+    },
     {
       title: "Achievement of Integrative Agreements in Negotiation",
       authors: "Dean G. Pruitt",
