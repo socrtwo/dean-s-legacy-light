@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="bg-gradient-to-b from-muted to-background py-8">
+      <div className="bg-gradient-to-b from-muted to-background pt-8 pb-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="flex gap-4 justify-center mb-22">
             <Button asChild size="lg">
@@ -36,7 +36,7 @@ const Index = () => {
       </div>
 
       {/* Bio Section */}
-      <div className="max-w-6xl mx-auto px-4 pb-8">
+      <div className="max-w-6xl mx-auto px-4">
         <MemorialBio />
       </div>
 
