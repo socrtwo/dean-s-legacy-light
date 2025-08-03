@@ -38,9 +38,9 @@ const MemorialBio = () => {
       authors: "Dean G. Pruitt, Sung Hee Kim",
       publisher: "McGraw-Hill",
       isbn: "978-0072855357",
-      amazonUrl: "https://www.amazon.com/dp/0072855357",
+      amazonUrl: "https://www.amazon.com/s?k=978-0072855357",
       googleBooksUrl: "https://books.google.com/books?isbn=0072855357",
-      worldcatUrl: "https://www.worldcat.org/isbn/0072855357"
+      worldcatUrl: "https://search.worldcat.org/search?q=978-0072855357&offset=1"
     },
     {
       title: "Searching for Better Agreements ... and Finding Them: Contributions of Dean G. Pruitt",
