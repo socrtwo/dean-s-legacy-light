@@ -1,5 +1,10 @@
 # Welcome to your Lovable project
 
+<!--PAGES_LINK_BANNER-->
+> 🌐 **Live page:** [https://socrtwo.github.io/dean-s-legacy-light/](https://socrtwo.github.io/dean-s-legacy-light/)  
+> 📦 **Releases:** [github.com/socrtwo/dean-s-legacy-light/releases](https://github.com/socrtwo/dean-s-legacy-light/releases)
+<!--/PAGES_LINK_BANNER-->
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/17afb29d-261e-4018-be52-816f7c8893ac
